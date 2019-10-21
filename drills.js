@@ -1,5 +1,8 @@
 function createGreeting(name, age){
-    try{
+    if(name == null || age == null){
+        throw new Error("Name or Age not valid");
+    }
+    try {
         const yob = getYearOfBirth(age);
     } catch {
         console.log(Error.message);
