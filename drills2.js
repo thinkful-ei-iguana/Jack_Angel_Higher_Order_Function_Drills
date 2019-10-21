@@ -17,3 +17,23 @@ function beyond (num) {
     console.log('Staying home');
   }
 }
+
+function decode (word) {
+  if (word.startsWith('a')) {
+    return word.charAt(1);
+  }
+  else if (word.startsWith('b')) {
+    return word.charAt(2);
+  }
+  else if (word.startsWith('c')) {
+    return word.charAt(3);
+  }
+  else if (word.startsWith('d')) {
+    return word.charAt(4);   
+  }
+  else {
+    return ' ';
+  }
+} 
+decode('craft block argon meter bells brown croon droop')
+
