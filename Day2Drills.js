@@ -116,7 +116,7 @@ tornadoWarning('Centinela Ave and Olympic Blvd');
 thunderWarning('Main St and Pacific Ave');
 thunderWarning('Centinela Ave and Olympic Blvd');*/
 
-function turtleSteps(arr){
+/*function turtleSteps(arr){
   let newArray = arr.filter(element => (element[0] >= 0 && element[1] >= 0));
   let i = 0;
   newArray.forEach(function(element){
@@ -126,4 +126,23 @@ function turtleSteps(arr){
   });
 }
 
-turtleSteps([[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]);
+turtleSteps([[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]);*/
+
+function reducer(accumulator, currentValue) {
+  //console.log(`${currentValue} is ${currentValue.length}`);
+  if(currentValue.length === 3) {
+    accumulator += ' ';
+  } else {
+    accumulator += currentValue.charAt(currentValue.length -1).toUpperCase();
+  }
+  return accumulator;
+}
+
+function decoder(str){
+  let arr = str.split(' ');
+  let result = '';
+  result = arr.reduce(reducer, result);
+  return result;
+}
+
+console.log(decoder('noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'));
