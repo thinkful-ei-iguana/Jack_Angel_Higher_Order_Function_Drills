@@ -109,9 +109,21 @@ const rocksWarning = hazardWarningCreator('Rocks on the Road');
 const tornadoWarning = hazardWarningCreator('Tornado in the Area');
 const thunderWarning = hazardWarningCreator('Thunder in the Sky');
 
-rocksWarning('Main St and Pacific Ave');
+/*rocksWarning('Main St and Pacific Ave');
 rocksWarning('Centinela Ave and Olympic Blvd');
 tornadoWarning('Main St and Pacific Ave');
 tornadoWarning('Centinela Ave and Olympic Blvd');
 thunderWarning('Main St and Pacific Ave');
-thunderWarning('Centinela Ave and Olympic Blvd');
+thunderWarning('Centinela Ave and Olympic Blvd');*/
+
+function turtleSteps(arr){
+  let newArray = arr.filter(element => (element[0] >= 0 && element[1] >= 0));
+  let i = 0;
+  newArray.forEach(function(element){
+    console.log(`movement #${i} ${element[0]} steps`);
+    console.log(`movement #${i+1} ${element[1]} steps`);
+    i += 2;
+  });
+}
+
+turtleSteps([[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]);
