@@ -46,42 +46,42 @@ function maxNumber(numbers) {
   }
   return currentMax;
 }
-  
-function minNumber(numbers) {
+
+function minNumber (numbers) {
   let currentMin = numbers[0];
   let i = 0;
   while (i < numbers.length) {
     if (numbers[i] < currentMin) {
       currentMin = numbers[i];
     }
-    i++
+    i ++
   }
   return currentMin;
 }
 
 
 
-function repeat(fn, n){
-  for(let i = 0; i < n; i++){
+function repeat (fn, n){
+  for (let i = 0; i < n; i++) {
     fn();
   }
 }
   
-function hello(){
+function hello () {
   console.log('Hello World');
 }
   
-function goodbye(){
+function goodbye () {
   console.log('Goodbye World');
 }
   
 /*repeat(hello, 5);
 repeat(goodbye, 5);*/
 
-function filter(arr, fn) {
+function filter (arr, fn) {
   let newArray = [];
   arr.forEach(function (element){
-    if(fn (element)){
+    if (fn (element)){
       newArray.push(element);
     }
 
@@ -89,7 +89,7 @@ function filter(arr, fn) {
   return newArray;
 }
 const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
-const filteredNames = filter(myNames, function(name) {
+const filteredNames = filter (myNames, function (name) {
   // This is known as a "predicate function" - it's a function that 
   // only returns a boolean
   return name[0] === 'R';
@@ -97,26 +97,26 @@ const filteredNames = filter(myNames, function(name) {
 
 //console.log(filteredNames);
 
-function hazardWarningCreator(typeOfWarning){
+function hazardWarningCreator (typeOfWarning){
   let warningCounter = 0;
-  return function(location){
+  return function (location){
     warningCounter++;
     console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
   };
 }
 
-const rocksWarning = hazardWarningCreator('Rocks on the Road');
-const tornadoWarning = hazardWarningCreator('Tornado in the Area');
-const thunderWarning = hazardWarningCreator('Thunder in the Sky');
+const rocksWarning = hazardWarningCreator ('Rocks on the Road');
+const tornadoWarning = hazardWarningCreator ('Tornado in the Area');
+const thunderWarning = hazardWarningCreator ('Thunder in the Sky');
 
-/*rocksWarning('Main St and Pacific Ave');
+rocksWarning('Main St and Pacific Ave');
 rocksWarning('Centinela Ave and Olympic Blvd');
 tornadoWarning('Main St and Pacific Ave');
 tornadoWarning('Centinela Ave and Olympic Blvd');
 thunderWarning('Main St and Pacific Ave');
 thunderWarning('Centinela Ave and Olympic Blvd');*/
 
-/*function turtleSteps(arr){
+function turtleSteps(arr){
   let newArray = arr.filter(element => (element[0] >= 0 && element[1] >= 0));
   let i = 0;
   newArray.forEach(function(element){
