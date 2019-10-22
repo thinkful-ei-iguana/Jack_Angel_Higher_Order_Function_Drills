@@ -32,9 +32,7 @@ function average(numbers){
   return total/numbers.length;
 }
 
-console.log(min([1,2,3]));
-console.log(max([1,2,3]));
-console.log(average([1,2,3]));
+
 
 //Angel Max-Min Drill Redone
 function maxNumber(numbers) {
@@ -77,8 +75,8 @@ function goodbye(){
   console.log('Goodbye World');
 }
   
-repeat(hello, 5);
-repeat(goodbye, 5);
+/*repeat(hello, 5);
+repeat(goodbye, 5);*/
 
 function filter(arr, fn) {
   let newArray = [];
@@ -97,4 +95,23 @@ const filteredNames = filter(myNames, function(name) {
   return name[0] === 'R';
 });
 
-console.log(filteredNames);
+//console.log(filteredNames);
+
+function hazardWarningCreator(typeOfWarning){
+  let warningCounter = 0;
+  return function(location){
+    warningCounter++;
+    console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
+  };
+}
+
+const rocksWarning = hazardWarningCreator('Rocks on the Road');
+const tornadoWarning = hazardWarningCreator('Tornado in the Area');
+const thunderWarning = hazardWarningCreator('Thunder in the Sky');
+
+rocksWarning('Main St and Pacific Ave');
+rocksWarning('Centinela Ave and Olympic Blvd');
+tornadoWarning('Main St and Pacific Ave');
+tornadoWarning('Centinela Ave and Olympic Blvd');
+thunderWarning('Main St and Pacific Ave');
+thunderWarning('Centinela Ave and Olympic Blvd');
